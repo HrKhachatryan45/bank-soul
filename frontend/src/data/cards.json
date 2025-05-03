@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "isBig": false,
+    "title": "Visa Classic",
+    "color": "images/visa-classic.webp",
+    "validYear": 5
+  },
+  {
+    "id": 2,
+    "isBig": false,
+    "title": "Mastercard Platinum",
+    "color": "images/mastercard-platinum.webp",
+    "validYear": 4
+  },
+  {
+    "id": 3,
+    "isBig": true,
+    "title": "American Express Gold",
+    "color": "images/amex-gold.webp",
+    "validYear": 4
+  },
+  {
+    "id": 4,
+    "isBig": false,
+    "title": "Discover Cashback",
+    "color": "images/discover-cashback.webp",
+    "validYear": 2
+  },
+  {
+    "id": 5,
+    "isBig": true,
+    "title": "Chase Sapphire",
+    "color": "images/chase-sapphire.webp",
+    "validYear": 3
+  },
+  {
+    "id": 6,
+    "isBig": true,
+    "title": "Capital One Quicksilver",
+    "color": "images/capital-one-quicksilver.webp",
+    "validYear": 5
+  }
+]
