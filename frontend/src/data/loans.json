@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "imagePath": "images/bussiness.png",
+    "title": "Business Loan",
+    "data": {
+      "interestRate": 8,
+      "deadline": "15 years",
+      "amount": "10000-500000"
+    }
+  },
+  {
+    "id": 2,
+    "imagePath":"images/home.png",
+    "title": "Home Improvement Loan",
+    "data": {
+      "interestRate": 7,
+      "deadline": "10 years",
+      "amount": "5000-100000"
+    }
+  },
+  {
+    "id": 3,
+    "imagePath":"images/debt.png",
+    "title": "Debt Consolidation Loan",
+    "data": {
+      "interestRate": 9,
+      "deadline": "7 years",
+      "amount": "3000-100000"
+    }
+  },
+  {
+    "id": 4,
+    "imagePath":"images/medical.png",
+    "title": "Medical Loan",
+    "data": {
+      "interestRate": 6.5,
+      "deadline": "5 years",
+      "amount": "1000-50000"
+    }
+  },
+  {
+    "id": 5,
+    "imagePath":"images/vacation.webp",
+    "title": "Vacation Loan",
+    "data": {
+      "interestRate": 11,
+      "deadline": "3 years",
+      "amount": "1000-20000"
+    }
+  },
+  {
+    "id": 6,
+    "imagePath":"images/wedding.webp",
+    "title": "Wedding Loan",
+    "data": {
+      "interestRate": 9.5,
+      "deadline": "5 years",
+      "amount": "2000-50000"
+    }
+  }
+]

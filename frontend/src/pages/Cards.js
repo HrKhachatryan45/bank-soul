@@ -3,13 +3,18 @@ import Navbar from "../components/Navbar";
 import cards from "../data/cards.json"
 import useAddCard from "../hooks/useAddCard";
 import Footer from "../components/Footer";
+import {useAuthContext} from "../context/useAuthContext";
+import {useNavigate} from "react-router-dom";
 
 function Cards(props) {
+    const navigate = useNavigate();
+    const {authUser} = useAuthContext()
+    const [activeIndexC, setActiveIndexC] = useState(null);
     const [activeIndex, setActiveIndex] = useState(null);
     const [password,setPassword] = useState('');
     const [phoneNumber,setPhoneNumber] = useState("");
     const {addCard,error} = useAddCard();
-
+    const [newError,setNewError] = useState(null)
     const handleAddCard = async (ev,index) => {
         ev.preventDefault()
         await addCard(cards[index].color,password,phoneNumber,cards[index].validYear,cards[index].title);
@@ -57,7 +62,22 @@ function Cards(props) {
                                                 <button type="submit">Order</button>
                                             </form>
                                         ) : (
-                                            <button onClick={() => setActiveIndex(index)}>Order</button>
+                                            <div>
+                                            {newError && activeIndexC === index  && <section className={'err'}>
+                                                <p>{newError}</p>
+                                            </section>}
+                                                <button onClick={() =>{
+                                                if (authUser){
+                                                    setActiveIndex(index)
+                                                }else{
+                                                    setNewError('Not Logged In')
+                                                    setTimeout(() => {
+                                                        navigate('/login')
+                                                    },3000)
+                                                    setActiveIndexC(index)
+                                                }
+                                            }}>Order</button>
+                                            </div>
                                         )}
                                     </section>
                                 </div>

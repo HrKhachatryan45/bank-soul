@@ -47,7 +47,7 @@ top: 0;
   background: $beige;
   transition: 1s;
   ul{
-    width: 50%;
+    width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -1283,6 +1283,7 @@ table{
   height: 100%;
   border-radius: 30px;
 }
+
 .mid-cards div{
   width: 60%;
   height: 100%;
@@ -1327,7 +1328,33 @@ table{
   padding-left: 20px;
   box-sizing: border-box;
 }
+.w1{
+  justify-content: start;
+  div{
+    width: 96%;
+  }
+  img{
+    width: 25%;
+  }
+  h2{
+    font-size: 25px!important;
+  }
+}
 
+.ewq{
+  display: flex;
+}
+.w1  .inf{
+  width: 90%!important;
+  margin-left: 50px;
+}
+
+.ck{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: fit-content!important;
+}
 .dew{
   width: 50%;
   height: 100%;

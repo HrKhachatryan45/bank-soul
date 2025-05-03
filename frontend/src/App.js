@@ -9,6 +9,7 @@ import Transactions from "./pages/Transactions";
 import MyCards from "./pages/MyCards";
 import MyLoans from "./pages/MyLoans";
 import Cards from "./pages/Cards";
+import Loans from "./pages/Loans";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route path={'/register'} element={!authUser?<Register />:<Navigate to={'/'}/>} />
               <Route path={'/'} element={<Home/>}/>
               <Route path={'/cards'} element={<Cards/>}/>
+              <Route path={'/loans'} element={<Loans/>}/>
               <Route path={'/dashboard'} element={authUser?<Dashboard/>:<Navigate to={'/'}/> }/>
               <Route path={'/balance'} element={authUser?<Balance/>:<Navigate to={'/'}/> }/>
               <Route path={'/transactions'} element={authUser?<Transactions/>:<Navigate to={'/'}/> }/>

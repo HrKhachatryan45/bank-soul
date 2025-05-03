@@ -98,28 +98,32 @@ function MyLoans(props) {
                         {authUser.bankData.loans.length > 0 ?
                             <Carousel className={'cardK add addUp fery'}>
                                 {authUser.bankData.loans.map((loan, index) => (
-                                    <Carousel.Item key={index}>
-                                        <section className={'cardX'}>
-                                            <h4>{loan.loanType}</h4> {/* Correct field name loanType */}
+                                    <Carousel.Item  key={index}>
+                                        <div className={'ewq'}>
+                                            <section className={'cardX'}>
+                                                <h4>{loan.loanType}</h4> {/* Correct field name loanType */}
 
-                                            <div className={'loanInfo'}>
-                                                <h2>Borrower: {loan.fullName}</h2>
-                                                <h3>Amount: ${loan.money.toLocaleString()}</h3>
-                                                <h3>Returned: ${loan.returnedMoney.toLocaleString()}</h3>
-                                                <h3>Interest Rate: {loan.percentage}%</h3>
-                                                <h3>Monthly Payment: ${loan.monthlyFee.toFixed(2)}</h3>
-                                                <h3>Deadline: {loan.deadline}</h3>
-                                            </div>
+                                                <div className={'loanInfo'}>
+                                                    <h2>Borrower: {loan.fullName}</h2>
+                                                    <h3>Amount: ${loan.money.toLocaleString()}</h3>
+                                                    <h3>Returned: ${loan.returnedMoney.toLocaleString()}</h3>
+                                                    <h3>Interest Rate: {loan.percentage}%</h3>
+                                                    <h3>Monthly Payment: ${loan.monthlyFee.toFixed(2)}</h3>
+                                                    <h3>Deadline: {loan.deadline}</h3>
+                                                </div>
 
-                                        </section>
-                                        <section className={'cardY'}>
-                                            <h2>Repayment of the loan</h2>
-                                            <h4>Monthly Fee: ${loan.monthlyFee.toString().substr(0,5)}</h4>
-                                            {error && <section className={'err'}>
-                                                <p>{error}</p>
-                                            </section>}
-                                            <button onClick={() => handlePay(loan._id)} disabled={getNextRepaymentDate(loan) === (new Date())}>Pay loan</button>
-                                        </section>
+                                            </section>
+                                            <section className={'cardY'}>
+                                                <h2>Repayment of the loan</h2>
+                                                <h4>Monthly Fee: ${loan.monthlyFee.toString().substr(0, 5)}</h4>
+                                                {error && <section className={'err'}>
+                                                    <p>{error}</p>
+                                                </section>}
+                                                <button onClick={() => handlePay(loan._id)}
+                                                        disabled={getNextRepaymentDate(loan) === (new Date())}>Pay loan
+                                                </button>
+                                            </section>
+                                        </div>
                                     </Carousel.Item>
                                 ))}
                             </Carousel>
@@ -128,8 +132,8 @@ function MyLoans(props) {
                                 <p>No Loans Yet</p>
                             </section>
                         }
-                        {authUser.bankData.loans.length === 0?<section className={'cardK add addUp'}>
-                            <h3>Get A Loan </h3>
+                        {authUser.bankData.loans.length === 0 ? <section className={'cardK add addUp'}>
+                                <h3>Get A Loan </h3>
 
                                 <form onSubmit={handleSubmit}>
                                     <div className={'tr'}>
@@ -138,7 +142,8 @@ function MyLoans(props) {
                                     </div>
                                     <div className="loanTypes">
                                         {loanTypes.map((loan, index) => (
-                                            <section className={selectedLoan.id === loan.id?'sel':''} key={index} onClick={() => setSelectedLoan(loan)}>
+                                            <section className={selectedLoan.id === loan.id ? 'sel' : ''} key={index}
+                                                     onClick={() => setSelectedLoan(loan)}>
                                                 <h4>{loan.title}</h4>
                                                 <table>
                                                     <tr>

@@ -58,7 +58,6 @@ function Navbar(props) {
                 <ul>
                     <li><Link to={'/cards'}>Cards</Link></li>
                     <li><Link to={'/loans'}>Loans</Link></li>
-                    <li><Link to={'/savings'}>Savings</Link></li>
 
                 </ul>
                 <section className={'userBox'}>
